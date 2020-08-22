@@ -44,16 +44,18 @@ class RegistrationActivity : AppCompatActivity() {
 
             override fun onResponse(
                 call: Call<RegistrationResponse>,
-                response: Respons
-                 e<RegistrationResponse>
-            ) {
+                response: Response,<RegistrationResponse>
+
+            )
+            {
                 if (response.isSuccessful) {
                     Toast.makeText(baseContext, response.body()?.message, Toast.LENGTH_LONG).show()
                     startActivity(Intent(baseContext, MainActivity::class.java))
                 } else {
-                Toast.makeText(baseContex,response.errorBody()toString(),Toast.LENGTH_LONG)
-                    .show()
+                    Toast.makeText(baseContex, response.errorBody() toString (), Toast.LENGTH_LONG)
+                        .show()
                 }
+            }
             })
         }
     }
