@@ -8,10 +8,10 @@ import com,google.gson,annotation,SerializedName
 @Entity(tableName = "course")
 data class Course (
     @Primarly @NonNull @SerializeName(value: "Course_id")var CourseId: String
-    @Primarly @NonNull @SerializeName(value: "Course_name")var CourseName: String
-    @Primarly @NonNull @SerializeName(value: "Course_code")var CourseCode: String
-    @Primarly @NonNull @SerializeName(value: "instructor")var instructor: String
-    @Primarly @NonNull @SerializeName(value: "description")var Coursedescription: String
+    @SerializedName (value: "Course_name")var CourseName: String
+    @SerializedNamed(value: "Course_code")var CourseCode: String
+    @SerializeName(value: "instructor")var instructor: String
+    @SerializeName(value: "description")var Coursedescription: String
 
 
 

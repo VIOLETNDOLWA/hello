@@ -1,12 +1,19 @@
 package com.example.hello.database
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import ke.Course
+import ke.co.hello.models.Course
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
+@Dao
+interface CourseDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertCourse(course: Course)
 
-class CourseDoo : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_course_doo2)
-    }
+    @Query("SELECT * FROM courses")
+    fun getAllCourses(): List<Course>
 }
+
+
+

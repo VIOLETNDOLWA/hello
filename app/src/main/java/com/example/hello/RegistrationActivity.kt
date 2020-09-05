@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.hello.MainActivity
 import kotlinx.android.synthetic.main.activity_registration.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -50,7 +51,7 @@ class RegistrationActivity : AppCompatActivity() {
             {
                 if (response.isSuccessful) {
                     Toast.makeText(baseContext, response.body()?.message, Toast.LENGTH_LONG).show()
-                    startActivity(Intent(baseContext, MainActivity::class.java))
+                    startActivity(Intent(baseContext, com.example.hello.MainActivity::class.java))
                 } else {
                     Toast.makeText(baseContex, response.errorBody() toString (), Toast.LENGTH_LONG)
                         .show()
