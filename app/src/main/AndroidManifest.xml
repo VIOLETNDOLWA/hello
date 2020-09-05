@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.hello">
+          package="ke.co.hello">
 
     <application
             android:allowBackup="true"
@@ -9,16 +9,44 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".loginapi">
+        <activity android:name=".database.CourseActivity">
         </activity>
-        <activity android:name=".course">
+        <activity android:name=".database.HelloDatabase">
+        </activity>
+        <activity android:name=".database.CourseDoo">
+        </activity>
+        <activity android:name=".CourseDoo">
+        </activity>
+        <activity android:name=".Student">
+        </activity>
+        <activity android:name=".SplashActivity">
+        </activity>
+        <activity android:name=".RegistrationResponse">
+        </activity>
+        <activity android:name=".RegistrationAtivity">
+        </activity>
+        <activity android:name=".LoginResponse">
+        </activity>
+        <activity
+                android:name=".CourseResponse"
+                android:label="@string/title_activity_course_response"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".CourseActivity">
+        </activity>
+        <activity android:name=".MainCourse">
+        </activity>
+        <activity android:name=".HelloApp">
+        </activity>
+        <activity android:name=".CourseAdapter">
+        </activity>
+        <activity android:name=".COourseActivity">
+        </activity>
+        <activity android:name=".CourseActivity">
+        </activity>
+        <activity android:name=".RegistrationActivity" />
         </activity>
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
     </application>
 
